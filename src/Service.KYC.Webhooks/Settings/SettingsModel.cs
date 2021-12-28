@@ -5,13 +5,13 @@ namespace Service.KYC.Webhooks.Settings
 {
     public class SettingsModel
     {
-        [YamlProperty("KYC.Webhooks.SeqServiceUrl")]
+        [YamlProperty("KycWebhooks.SeqServiceUrl")]
         public string SeqServiceUrl { get; set; }
 
-        [YamlProperty("KYC.Webhooks.ZipkinUrl")]
+        [YamlProperty("KycWebhooks.ZipkinUrl")]
         public string ZipkinUrl { get; set; }
 
-        [YamlProperty("KYC.Webhooks.ElkLogs")]
+        [YamlProperty("KycWebhooks.ElkLogs")]
         public LogElkSettings ElkLogs { get; set; }
     }
 }
