@@ -13,5 +13,8 @@ namespace Service.KYC.Webhooks.Settings
 
         [YamlProperty("KycWebhooks.ElkLogs")]
         public LogElkSettings ElkLogs { get; set; }
+        
+        [YamlProperty("KycWebhooks.SpotServiceBusHostPort")]
+        public string SpotServiceBusHostPort { get; set; }
     }
 }
