@@ -67,7 +67,7 @@ namespace Service.KYC.Webhooks.Services
                 
                 try
                 {
-                    var response = await JsonSerializer.DeserializeAsync<KycAidResponse>(buffer);
+                    var response = JsonSerializer.Deserialize<KycAidResponse>(body);
                     if (response != null)
                     {
                         await _publisher.PublishAsync(new KycVerificationResultMessage
