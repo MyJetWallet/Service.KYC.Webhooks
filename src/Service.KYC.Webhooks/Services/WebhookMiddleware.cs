@@ -74,24 +74,6 @@ namespace Service.KYC.Webhooks.Services
                         {
                             ApplicantId = response.ApplicantId,
                             Verified = response.Verified,
-                            FirstName = response.Applicant.FirstName,
-                            MiddleName = response.Applicant.MiddleName,
-                            LastName = response.Applicant.LastName,
-                            ResidenceCountry = response.Applicant.ResidenceCountry,
-                            DateOfBirth = response.Applicant.DateOfBirth,
-                            Country = response.Applicant.Addresses?.FirstOrDefault()?.Country,
-                            StateOrProvince = response.Applicant.Addresses?.FirstOrDefault()?.Country,
-                            City = response.Applicant.Addresses?.FirstOrDefault()?.City,
-                            PostalCode = response.Applicant.Addresses?.FirstOrDefault()?.PostalCode,
-                            StreetName = response.Applicant.Addresses?.FirstOrDefault()?.StreetName,
-                            BuildingNumber = response.Applicant.Addresses?.FirstOrDefault()?.BuildingNumber,
-                            UnitNumber = response.Applicant.Addresses?.FirstOrDefault()?.UnitNumber,
-                            DocumentChecks = response.Applicant.Documents?.Select(document => new DocumentCheck()
-                            {
-                                DocumentId = document.DocumentId,
-                                Status = document.Status,
-                                DeclineReasons = String.Join(", ", document.DeclineReasons)
-                            }).ToList(),
                             VerificationId = response.VerificationId,
                             ExternalApplicantId = response.Applicant.ExternalApplicantId
                         });
